@@ -1,28 +1,38 @@
-BSD 3-Clause License
+Bik Public License 4.0
+Copyright and License Statement
 
-Copyright (c) 2023, Burak T.
+License Holder: ["github.com/EW-EndWall"]
+License Update Date: ["28/09/2023"]
+License Type: ["Open Source"]
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
+Under this license, software, audio, video, text, images, and other content, hereinafter referred to as the "work," are protected by copyright held by the "License Holder" and are made available for use under the following terms and conditions:
 
-1. Redistributions of source code must retain the above copyright notice, this
-   list of conditions and the following disclaimer.
+1. Definitions
+   a. "License Holder": Represents the individual, individuals, or organization holding the copyright to the work.
+   b. "User" or "You": Represents any individual or organization wishing to use the work.
+   c. "License Update Date" or "License Date": Represents the date on which the work was included within the scope of the license and made available. If no date is specified, the date of the last modification or addition of the file is considered the license date.
+   d. "License Type": Represents whether the work is classified as open source or closed source. Open source signifies that the source code of the work is publicly available and can be modified, while closed source indicates limited or partially limited access to the source code. Open source adheres to principles of community collaboration and transparency, whereas closed source entails restricted usage and distribution rights. If no license type is specified, the work is considered an open source license.
 
-2. Redistributions in binary form must reproduce the above copyright notice,
-   this list of conditions and the following disclaimer in the documentation
-   and/or other materials provided with the distribution.
+2. Grant of License
+   a. This work grants users the right to use the work under the conditions stated below, provided that these conditions are accepted and the terms of the license are met.
 
-3. Neither the name of the copyright holder nor the names of its
-   contributors may be used to endorse or promote products derived from
-   this software without specific prior written permission.
+3. Modifications
+   a. This license allows you to modify the work as you wish.
+   b. This license does not cover modifications to the work; in other words, you cannot change the terms of the license.
+   c. Only the owner of the work's license within this license may modify or make changes to the license.
+   d. In the event of changes to the work's license under this license, the owner of the work is not required to notify such changes, and the changes will be effective from the date on which the license was modified or updated, with no retroactive effect.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+4. Commercial Use
+   a. This license does not permit the use of this work for commercial purposes without obtaining permission from the copyright holder.
+
+5. Redistribution and Renaming
+   a. This license does not allow you to redistribute or rename the work.
+   b. When redistributing the work under this license, you must preserve the original license and copyright notice, meaning you must credit the original license holder.
+
+6. Liability
+   a. The License Holder cannot be held responsible for any damage, issues, or losses that may arise from the use of this work.
+   b. Users are responsible for any potential damage that may arise from their use of this work.
+
+7. General Provisions
+   a. This license is the sole authority for the use and distribution of this work, and no other license provisions conflict with the terms of this license.
+   b. Failure to comply with the terms of this license will result in automatic termination of the license, and no rights can be claimed.
