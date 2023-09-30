@@ -3,10 +3,10 @@
     <img src="#" alt="Logo" width="220" height="auto">
   </a>
 
-  <h3 align="center">bClass<br/>components</h3>
+  <h3 align="center">bClass<br/>media player</h3>
 
   <p align="center">
-    media player
+    sound / video player
     <br/>
     <br/>
   </p>
