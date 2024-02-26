@@ -1,7 +1,7 @@
 /* * Bclass media player v2.0.0 (--)
  * * Copyright 2021-2023 ("https://github.com/EW-EndWall/bClass-media-player/blob/main/LICENSE")
  * * Licensed ("Bik Public License 4.0")
- * * Update ("28/09/2023")
+ * * License Update ("28/09/2023")
  */
 /*
  * --------
