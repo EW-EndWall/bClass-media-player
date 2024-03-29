@@ -27,4 +27,4 @@ It is designed to be used in --- services and systems within the scope of bClass
 
 ## License
 
-Distributed under the Bik Public License 4.0. See LICENSE for more information.
+Distributed under the Bik Public License 4.0. See [LICENSE](./LICENSE) for more information.

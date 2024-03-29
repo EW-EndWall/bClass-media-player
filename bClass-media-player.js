@@ -1,7 +1,8 @@
-/* * Bclass media player v2.0.0 (--)
- * * Copyright 2021-2023 ("https://github.com/EW-EndWall/bClass-media-player/blob/main/LICENSE")
+/*
+ * * Bclass media player v2.0.0 (--)
+ * * Copyright 2021 ("https://github.com/EW-EndWall/bClass-media-player/blob/main/LICENSE")
  * * Licensed ("Bik Public License 4.0")
- * * License Update ("28/09/2023")
+ * * License Update ("28/09/2024")
  */
 /*
  * --------
@@ -172,7 +173,6 @@ document.addEventListener("DOMContentLoaded", () => {
       let soundPlayerRepeat =
         localStorage.getItem("sound-player-repeat") === "true";
       let soundPlayerTimmerIsDragging = false;
-      let soundisLocal = false;
       // * quality list
       let soundQualityList = [];
       soundPlayerContainer
@@ -207,7 +207,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!sounds) {
         sounds =
           JSON.parse(localStorage.getItem("sound-player-playlist")) || [];
-        soundisLocal = true;
         if (!sounds.length) {
           soundPlayerControls.hide();
           soundPlayerCenterControls.hide();
@@ -378,7 +377,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // * is preload none
       if (soundElement.preload === "none") {
         soundPlayerLoading.hide();
-        // This event is triggered while the sound is playing and the data is just loading
+        // * This event is triggered while the sound is playing and the data is just loading
         soundElement.addEventListener("play", () => {
           soundPlayerLoading.show();
           soundPlayerCenterControls.hide();
@@ -460,7 +459,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // * media play speed option
       soundPlayerSpeedBtn.on("click", function (e) {
         toggleSoundPlayerSpeed($(this).find("span").text());
-        // menu close
+        // * menu close
         soundPlayerSpeedBtn
           .closest(".sound-player-speed-btn")
           .siblings("a")
@@ -469,7 +468,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // * media sub title option
       soundPlayerSubTitleBtn.on("click", function (e) {
         toggleSoundPlayerSubTitle($(this).find("span").attr("value"));
-        // menu close
+        // * menu close
         soundPlayerSubTitleBtn
           .closest(".sound-player-subtitle-btn")
           .siblings("a")
@@ -478,7 +477,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // * media quality option
       soundPlayerQualityBtn.find("a").on("click", function (e) {
         toggleSoundPlayerQuality($(this).find("span").attr("value"));
-        // menu close
+        // * menu close
         soundPlayerQualityBtn.siblings("a").click();
       });
       // * Function to format time in minutes and seconds
@@ -502,10 +501,10 @@ document.addEventListener("DOMContentLoaded", () => {
         // * navigator info
         const data = sounds[currentSoundIndex];
         toggleSoundPlayerMediaSessionNavigator(
-          sounds[currentSoundIndex].title,
-          sounds[currentSoundIndex].artist,
-          sounds[currentSoundIndex].album,
-          sounds[currentSoundIndex].img
+          data.title,
+          data.artist,
+          data.album,
+          data.img
         );
       }
       // * pause sound
@@ -717,15 +716,15 @@ document.addEventListener("DOMContentLoaded", () => {
       // * sound volume up function
       function toggleSoundPlayerVolumeUp() {
         const newVol = parseFloat(soundElement.volume) + 0.1;
-        if (newVolume <= 1) {
-          toggleSoundPlayerVolume(newVolume);
+        if (newVol <= 1) {
+          toggleSoundPlayerVolume(newVol);
         }
       }
       // * sound volume down function
       function toggleSoundPlayerVolumeDown() {
         const newVol = parseFloat(soundElement.volume) - 0.1;
-        if (newVolume >= 0) {
-          toggleSoundPlayerVolume(newVolume);
+        if (newVol >= 0) {
+          toggleSoundPlayerVolume(newVol);
         }
       }
       // * sound volume changle
@@ -826,11 +825,11 @@ document.addEventListener("DOMContentLoaded", () => {
             return $(this).attr("srclang") === status;
           });
           if (lag.length) {
-            // open subtitle
+            // * open subtitle
             const src = lag.attr("src");
             subtitleWrite(src);
           } else {
-            // api
+            // * api
             const soundId = sounds[currentSoundIndex]
               ? sounds[currentSoundIndex].id
               : null;
@@ -847,7 +846,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
           }
         } else {
-          // subtitle close
+          // * subtitle close
           soundPlayerSubTitleTexts.hide();
         }
         // * subtitle write
@@ -1116,7 +1115,6 @@ document.addEventListener("DOMContentLoaded", () => {
       let videoPlayerRepeat =
         localStorage.getItem("video-player-repeat") === "true";
       let videoPlayerTimmerIsDragging = false;
-      let videoisLocal = false;
       // * quality list
       let videoQualityList = [];
       videoPlayerContainer
@@ -1151,7 +1149,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!videos) {
         videos =
           JSON.parse(localStorage.getItem("video-player-playlist")) || [];
-        videoisLocal = true;
         if (!videos.length) {
           videoPlayerControls.hide();
           videoPlayerCenterControls.hide();
@@ -1320,7 +1317,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // * is preload none
       if (videoElement.preload === "none") {
         videoPlayerLoading.hide();
-        // This event is triggered while the video is playing and the data is just loading
+        // * This event is triggered while the video is playing and the data is just loading
         videoElement.addEventListener("play", () => {
           videoPlayerLoading.show();
           videoPlayerCenterControls.hide();
@@ -1401,7 +1398,7 @@ document.addEventListener("DOMContentLoaded", () => {
       videoPlayerNextPlayBtn.on("click", function (e) {
         toggleVideoPlayerNextPlay(!videoPlayerNextPlay);
       });
-      // Enable Picture-in-Picture when the video is clicked
+      // * Enable Picture-in-Picture when the video is clicked
       videoPlayerPıpBtn.on("click", function (e) {
         if (videoElement !== document.pictureInPictureElement) {
           videoElement.requestPictureInPicture();
@@ -1420,7 +1417,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // * media play speed option
       videoPlayerSpeedBtn.on("click", function (e) {
         toggleVideoPlayerSpeed($(this).find("span").text());
-        // menu close
+        // * menu close
         videoPlayerSpeedBtn
           .closest(".video-player-speed-btn")
           .siblings("a")
@@ -1429,7 +1426,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // * media sub title option
       videoPlayerSubTitleBtn.on("click", function (e) {
         toggleVideoPlayerSubTitle($(this).find("span").attr("value"));
-        // menu close
+        // * menu close
         videoPlayerSubTitleBtn
           .closest(".video-player-subtitle-btn")
           .siblings("a")
@@ -1438,7 +1435,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // * media quality option
       videoPlayerQualityBtn.find("a").on("click", function (e) {
         toggleVideoPlayerQuality($(this).find("span").attr("value"));
-        // menu close
+        // * menu close
         videoPlayerQualityBtn.siblings("a").click();
       });
       // * media full screen option
@@ -1466,10 +1463,10 @@ document.addEventListener("DOMContentLoaded", () => {
         // * navigator info
         const data = videos[currentVideoIndex];
         toggleVideoPlayerMediaSessionNavigator(
-          videos[currentVideoIndex].title,
-          videos[currentVideoIndex].artist,
-          videos[currentVideoIndex].album,
-          videos[currentVideoIndex].img
+          data.title,
+          data.artist,
+          data.album,
+          data.img
         );
       }
       // * pause video
@@ -1681,15 +1678,15 @@ document.addEventListener("DOMContentLoaded", () => {
       // * video volume up function
       function toggleVideoPlayerVolumeUp() {
         const newVol = parseFloat(videoElement.volume) + 0.1;
-        if (newVolume <= 1) {
-          toggleVideoPlayerVolume(newVolume);
+        if (newVol <= 1) {
+          toggleVideoPlayerVolume(newVol);
         }
       }
       // * video volume down function
       function toggleVideoPlayerVolumeDown() {
         const newVol = parseFloat(videoElement.volume) - 0.1;
-        if (newVolume >= 0) {
-          toggleVideoPlayerVolume(newVolume);
+        if (newVol >= 0) {
+          toggleVideoPlayerVolume(newVol);
         }
       }
       // * video volume changle
@@ -1768,7 +1765,6 @@ document.addEventListener("DOMContentLoaded", () => {
           .prop("checked", status ? true : false);
         videoPlayerDescriptions = status;
         localStorage.setItem("video-player-descriptions", status);
-        // add after
       }
       // * media speed option
       function toggleVideoPlayerSpeed(status) {
@@ -1799,10 +1795,10 @@ document.addEventListener("DOMContentLoaded", () => {
             return $(this).attr("srclang") === status;
           });
           if (lag.length) {
-            // open subtitle
+            // * open subtitle
             lag[0].track.mode = "showing";
           } else {
-            // api
+            // * api
             const videoId = videos[currentVideoIndex]
               ? videos[currentVideoIndex].id
               : null;
@@ -1838,7 +1834,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
           }
         } else {
-          // Alt yazıyı kapatın
+          // * turn off subtitles
           if (videoPlayerSubTitleTrack.length)
             videoPlayerSubTitleTrack[0].track.mode = "hidden";
         }
