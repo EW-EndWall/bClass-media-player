@@ -1827,15 +1827,18 @@ document.addEventListener("DOMContentLoaded", () => {
       if (videoPlayerHoverLoadBtn.length && videoPlayerHoverLoad) {
         const media = videoPlayerContainer.find("video");
         const res = videos[currentVideoIndex].img.slice(-1)[0].src;
+        let isVideoElement;
         videoPlayerHoverLoadBtn.on("mouseenter", () => {
           videoPlayerHoverLoadBtn.removeAttr("style");
           media.removeAttr("style");
           videoElement.volume = 0;
-          videoElement.play();
+          isVideoElement = videoElement.play();
         });
         videoPlayerHoverLoadBtn.on("mouseout", () => {
-          videoElement.pause();
-          videoElement.currentTime = 0;
+          isVideoElement.then((_) => {
+            videoElement.pause();
+            videoElement.currentTime = 0;
+          });
           if (res) media.css({ opacity: 0 });
           videoPlayerHoverLoadBtn.css({
             "background-image": "url(" + res + "",
