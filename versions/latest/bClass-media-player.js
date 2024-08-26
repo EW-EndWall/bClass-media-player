@@ -726,7 +726,7 @@ document.addEventListener("DOMContentLoaded", () => {
           soundPlayerSubTitleTexts.hide();
         }
       };
-      // * is video data loaded
+      // * is sound data loaded
       const soundIsLoad = () => {
         return soundElement.readyState >= 3 ? true : false;
       };
@@ -1808,7 +1808,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       // * is playing
       videoElement.addEventListener("playing", () => {
-        videoPlayerControls.toggleClass("animation-up-hover");
+        videoPlayerControls.toggleClass("animate-up-hover");
         // * This event is triggered when the video starts playing
         videoPlayerLoading.hide();
         toggleVideoPlayerPlayPauseIcon();
@@ -1818,7 +1818,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       // * is pause
       videoElement.addEventListener("pause", () => {
-        videoPlayerControls.toggleClass("animation-up-hover");
+        videoPlayerControls.toggleClass("animate-up-hover");
         // * This event is triggered when video is stopped
         toggleVideoPlayerPlayPauseIcon();
         videoPlayerBackBtn.hide();
