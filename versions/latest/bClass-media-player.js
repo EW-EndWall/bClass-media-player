@@ -407,9 +407,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       };
       // * Get a random sound index
-      const getRandomSoundIndex = () => {
-        return Math.floor(Math.random() * sounds.length);
-      };
+      const getRandomSoundIndex = () =>
+        Math.floor(Math.random() * sounds.length);
       // * Switch sound to next sound (partially updated with upload)
       const toggleSoundPlayerNextMedia = () => {
         // * If we are not in shuffle mode and not in repeat mode and the last sound has been played, stop playing and go back to the first sound.
@@ -1347,7 +1346,7 @@ document.addEventListener("DOMContentLoaded", () => {
           videoElementPause ? videoElement.play() : videoElement.pause();
         }
       };
-      // * guality create func
+      // * guality create
       const toggleVideoPlayerQualityAppend = () => {
         if (videos.length) {
           const target = videoPlayerQualityBtn.find("li");
@@ -1363,6 +1362,9 @@ document.addEventListener("DOMContentLoaded", () => {
           });
         }
       };
+      // * Get a random sound index
+      const getRandomVideoIndex = () =>
+        Math.floor(Math.random() * videos.length);
       // * Switch video to next video (partially updated with upload)
       const toggleVideoPlayerNextMedia = () => {
         // * If we are not in shuffle mode and not in repeat mode and the last video has been played, stop playing and go back to the first video.
