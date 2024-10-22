@@ -43,10 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       // * sound player time
       const soundPlayerCurrentTime = soundPlayerContainer.find(
-        ".sound-player-currentTime"
+        ".sound-player-current-time"
       );
       const soundPlayerTotalTime = soundPlayerContainer.find(
-        ".sound-player-totalTime"
+        ".sound-player-total-time"
       );
       const soundPlayerTimmer = soundPlayerContainer.find(
         ".sound-player-timmer"
@@ -984,10 +984,10 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       // * video player time
       const videoPlayerCurrentTime = videoPlayerContainer.find(
-        ".video-player-currentTime"
+        ".video-player-current-time"
       );
       const videoPlayerTotalTime = videoPlayerContainer.find(
-        ".video-player-totalTime"
+        ".video-player-total-time"
       );
       const videoPlayerTimmer = videoPlayerContainer.find(
         ".video-player-timmer"

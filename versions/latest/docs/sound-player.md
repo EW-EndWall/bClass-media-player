@@ -9,8 +9,8 @@
 - .sound-player-title
 - .sound-player-artist-name
 - .sound-player-poster
-- .sound-player-currentTime
-- .sound-player-totalTime
+- .sound-player-current-time
+- .sound-player-total-time
 - .sound-player-timmer
 - .sound-player-timmer-hover
 - .sound-player-center-controls
@@ -30,12 +30,12 @@
 - track[kind='subtitles']
 - .sound-player-subtitle-btn a
 - .sound-player-subtitle-text
+- .sound-player-subtitle-texts
 - .sound-player-quality-btn
 - .sound-player-quality-text
 - .sound-player-nextplay-btn
 - .sound-player-repeat-btn
 - .sound-player-repeat-icon
-- .sound-player-subtitle-texts
 
 ### exaple
 
